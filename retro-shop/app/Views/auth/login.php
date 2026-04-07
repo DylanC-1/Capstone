@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Login - The Retro Shop</title>
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Your Account</h2>
+        <form action="/auth/login" method="POST">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="/auth/register">Register here</a></p>
+    </div>
+</body>
+</html>
