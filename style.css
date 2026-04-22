@@ -22,7 +22,7 @@ body {
 .motto {
     flex: 1;
     text-align: center;
-    font-size: 14px;
+    font-size: 20px;
     color: #ffffff;}
 
 .auth-buttons {
@@ -90,33 +90,63 @@ body {
 }
 .cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 per row */
-    gap: 25px;
-    padding: 30px;
-    max-width: 1000px; /* keeps layout tight */
-    margin: 0 auto; /* center it */
+    grid-template-columns: repeat(8, 1fr);   /* 8 per row */
+    grid-template-rows: repeat(3, 1fr);      /* 3 rows */
+    gap: 10px;
+    padding: 10px;
 }
-
 .card {
     background-color: #111827;
-    padding: 12px;
-    border-radius: 10px;
+    border-radius: 8px;
     text-align: center;
-    transition: 0.3s;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
 .card img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    object-fit: contain;
+    image-rendering: auto;
 }
 
 .card p {
-    margin-top: 10px;
-    font-size: 16px;
+    font-size: 12px;
+    margin-top: 4px;
 }
 
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 12px #00ff66;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #111827;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.pagination button:hover {
+    background: #00ff66;
+    color: black;
+}
+
+.pagination button.active {
+    background: #00ff66;
+    color: black;
+    font-weight: bold;
 }
